@@ -27,8 +27,9 @@
 			<th> Nama Buku</th>
 			<th> Jenis Buku</th>
 			<th> Kelas </th>
-			<th> Kurikulum <th>
-			<th> Penerbit <th>
+			<th> Kurikulum </th>
+			<th> Penerbit </th>
+			<th> Tanggal Peminjaman </th>
 			<th colspan = "2" width = "auto"><center>Aksi</center><th>
 		</tr>
 	</table>
