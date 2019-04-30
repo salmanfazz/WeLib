@@ -23,12 +23,12 @@
 	<table class = "table table-hover">
 		<tr>
 			<th> No </th>
-			<th> ID Pengembalian </th>
+			<th> ID Peminjaman </th>
 			<th> Kode Buku </th>
-			<th> Nama Buku</th>
-			<th> Jenis Buku</th>
+			<th> Judul Buku </th>
 			<th> Kelas </th>
 			<th> Penerbit </th>
+			<th> Tempat Penyimpanan </th>
 			<th> Tanggal Pengembalian </th>
 			<th colspan = "2" width = "auto"><center>Aksi</center><th>
 		</tr>
@@ -38,15 +38,15 @@
 			<td> {{ $row->id_peminjaman}} </td>
 			<td> {{ $row->kd_buku}} </td>
 			<td> {{ $row->nama_buku}} </td>
-			<td> {{ $row->jenis_buku}} </td>
 			<td> {{ $row->kelas}} </td>
 			<td> {{ $row->penerbit}} </td>
+			<td> {{ $row->penyimpanan}} </td>
 			<td> {{ $row->tanggal_pengembalian}} </td>
 			<td>
 				<a class = "btn btn-success" href = "#">Edit</a>
 			</td>
 			<td>
-				<form action = "{{ url('/guru', $row->id) }}" method = "POST">
+				<form action = "{{ url('/pengembalian', $row->id) }}" method = "POST">
 				@method('DELETE')
 				@csrf
 				<button class = "btn btn-danger" type = "submit">Delete</button>
@@ -56,4 +56,5 @@
 	</table>
 		</div>
 	</body>
+</html>
 @endsection

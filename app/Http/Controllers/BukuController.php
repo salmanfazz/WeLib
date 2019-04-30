@@ -6,23 +6,13 @@ use Illuminate\Http\Request;
 
 class BukuController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
-        return view('Buku');
-    }
+    public function index() 
+	{
+		// $data['Peminjaman'] = \DB::table('t_Peminjaman')
+		// ->orderBy('nama_Peminjaman')
+		// ->get();
+		
+		$data['buku'] = \App\Peminjaman::orderBy('kd_buku')->get();
+		return view('Buku', $data);
+	}
 }

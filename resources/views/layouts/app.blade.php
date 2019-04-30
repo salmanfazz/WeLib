@@ -10,9 +10,6 @@
 			<li class="nav-item"><a class="nav-link" href="{{ url('Peminjaman') }}">Data Peminjaman</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url('Pengembalian') }}">Data Pengembalian</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url('Buku') }}">Data Buku</a></li>
-			<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-		</form>
 		</ul>	
 		<ul class="navbar-nav ml-auto">
 			@guest
@@ -32,7 +29,7 @@
 					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
 				</div>
 			</li>
-                        @endguest
+            @endguest
 		</ul>
 	</div>
 </nav>

@@ -12,7 +12,7 @@ class PeminjamanController extends Controller
 		// ->orderBy('nama_Peminjaman')
 		// ->get();
 		
-		$data['pengembalian'] = \App\Peminjaman::orderBy('id_Peminjaman')->get();
+		$data['peminjaman'] = \App\Peminjaman::orderBy('id_peminjaman')->get();
 		return view('Peminjaman', $data);
 	}
 }

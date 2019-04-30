@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pengembalian extends Model
+class Peminjaman extends Model
 {
-	public $table = 'pengembalian';
+	public $table = 'peminjaman';
 	
 	protected $fillable = [
-		'id_pengembalian','kd_buku','nama_buku','jenis_buku','kelas','penerbit','tanggal_pengembalian'
+		'id_peminjaman','kd_buku','nama_buku','kelas','penerbit','penyimpanan','tanggal_peminjaman'
 	];
 }
