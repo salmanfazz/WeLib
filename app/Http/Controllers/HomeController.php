@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+		$peminjaman 	= \App\Peminjaman::get();
+        $pengembalian   = \App\Pengembalian::get();
+        $buku      		= \App\Buku::get();
+		
+        return view('home', compact('pengembalian', 'peminjaman', 'buku'));
     }
 }

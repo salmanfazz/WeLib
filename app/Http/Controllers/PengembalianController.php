@@ -12,7 +12,7 @@ class PengembalianController extends Controller
 		// ->orderBy('nama_Pengembalian')
 		// ->get();
 		
-		$data['pengembalian'] = \App\Pengembalian::orderBy('id_peminjaman')->get();
+		$data['pengembalian'] = \App\Pengembalian::where('status', 'like', 'Kembali')->get();
 		return view('Pengembalian', $data);
 	}
 }

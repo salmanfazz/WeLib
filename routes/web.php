@@ -19,5 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/Peminjaman', 'PeminjamanController@index')->name('Peminjaman');
+Route::delete('/Peminjaman/{id}', 'PeminjamanController@destroy');
+
 Route::get('/Pengembalian', 'PengembalianController@index')->name('Pengembalian');
+
 Route::get('/Buku', 'BukuController@index')->name('Buku');
+Route::delete('/Buku/{id}', 'BukuController@destroy');
