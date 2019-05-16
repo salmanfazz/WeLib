@@ -21,6 +21,7 @@
 								{{ session('error') }}
 							</div>
 							@endif
+							<br>
 							<a class = "btn btn-primary" type = "submit" href = "{{ url('/Buku/create') }}"> Tambah Data </a>
 								<h1>Data Buku</h1>
 						<table class = "table table-hover">
@@ -31,6 +32,7 @@
 								<th> Kurikulum </th>
 								<th> Kelas </th>
 								<th> Penerbit </th>
+								<th> Tempat Penyimpanan </th>
 								<th colspan = "2" width = "auto"><center>Aksi</center><th>
 							</tr>
 								@foreach ($buku as $row)
@@ -41,8 +43,9 @@
 								<td> {{ $row->kurikulum}} </td>
 								<td> {{ $row->kelas}} </td>
 								<td> {{ $row->penerbit}} </td>
+								<td> {{ $row->penyimpanan}} </td>
 								<td>
-									<a class = "btn btn-success" href = "#">Edit</a>
+									<a class = "btn btn-success" href = "{{ url('/Buku/' . $row->id . '/edit') }}">Edit</a>
 								</td>
 								<td>
 									<form action = "{{ url('/Buku', $row->id) }}" method = "POST">

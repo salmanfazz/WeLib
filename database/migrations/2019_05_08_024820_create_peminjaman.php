@@ -20,8 +20,8 @@ class CreatePeminjaman extends Migration
 			$table->string('nama_buku', 100);
 			$table->integer('kelas');
 			$table->string('penerbit');
-			$table->string('penyimpanan', 100);
 			$table->date('tanggal_peminjaman');
+			$table->date('tanggal_kembali');
 			$table->string('status', 100);
             $table->timestamps();
         });

@@ -18,10 +18,20 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/home-u', 'HomeUController@index')->name('home-u');
+Route::get('/Peminjaman-u/create', 'HomeUController@create');
+
 Route::get('/Peminjaman', 'PeminjamanController@index')->name('Peminjaman');
 Route::delete('/Peminjaman/{id}', 'PeminjamanController@destroy');
 
 Route::get('/Pengembalian', 'PengembalianController@index')->name('Pengembalian');
 
 Route::get('/Buku', 'BukuController@index')->name('Buku');
+Route::get('/Buku/create', 'BukuController@create');
+Route::post('/Buku', 'BukuController@store');
+Route::get('/Buku/{id}/edit', 'BukuController@edit');
+Route::patch('/Buku/{id}', 'BukuController@update');
 Route::delete('/Buku/{id}', 'BukuController@destroy');
+
+Route::get('/Buku-u', 'BukuUController@index')->name('Buku-u');

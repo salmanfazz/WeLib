@@ -9,6 +9,6 @@ class Buku extends Model
 	public $table = 'buku';
 	
 	protected $fillable = [
-		'kd_buku','nama_buku','kurikulum','kelas','penerbit'
+		'kd_buku','nama_buku','kurikulum','kelas','penerbit', 'penyimpanan'
 	];
 }

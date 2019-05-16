@@ -30,7 +30,6 @@
 								<th> Judul Buku </th>
 								<th> Kelas </th>
 								<th> Penerbit </th>
-								<th> Tempat Penyimpanan </th>
 								<th> Tanggal Peminjaman </th>
 								<th> Status </th>
 								<th colspan = "2" width = "auto"><center>Aksi</center><th>
@@ -43,7 +42,6 @@
 								<td> {{ $row->nama_buku}} </td>
 								<td> {{ $row->kelas}} </td>
 								<td> {{ $row->penerbit}} </td>
-								<td> {{ $row->penyimpanan}} </td>
 								<td> {{ $row->tanggal_peminjaman}} </td>
 								<td> {{ $row->status}} </td>
 								<td>

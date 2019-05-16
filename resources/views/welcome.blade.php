@@ -72,7 +72,7 @@
 
                 <div class="links">
                     <a href="{{ url('login') }}">Admin</a>
-                    <a href="">Guest</a>
+                    <a href="{{ url('home-u') }}">Guest</a>
                 </div>
             </div>
         </div>
