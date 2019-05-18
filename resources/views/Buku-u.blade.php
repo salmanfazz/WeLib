@@ -9,7 +9,7 @@
 	<body>
 		<div id="content">
 			<div id="content-header">
-				<div id="breadcrumb"> <a href="{{ url('home') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
+				<div id="breadcrumb"> <a href="{{ url('home-u') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
 					<div class = "container">
 							@if(session('success'))
 							<div class = "alert alert-success">

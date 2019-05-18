@@ -20,7 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/home-u', 'HomeUController@index')->name('home-u');
-Route::get('/Peminjaman-u/create', 'HomeUController@create');
 
 Route::get('/Peminjaman', 'PeminjamanController@index')->name('Peminjaman');
 Route::delete('/Peminjaman/{id}', 'PeminjamanController@destroy');
@@ -35,3 +34,11 @@ Route::patch('/Buku/{id}', 'BukuController@update');
 Route::delete('/Buku/{id}', 'BukuController@destroy');
 
 Route::get('/Buku-u', 'BukuUController@index')->name('Buku-u');
+
+Route::get('/PeminjamanU', 'PeminjamanUController@index')->name('PeminjamanU');
+Route::get('/Peminjaman/create', 'PeminjamanUController@create');
+Route::post('/PeminjamanU', 'PeminjamanUController@store');
+
+Route::get('/PengembalianU', 'PengembalianUController@index')->name('PengembalianU');
+Route::get('/Pengembalian/create', 'PengembalianUController@create');
+Route::post('/PengembalianU', 'PengembalianUController@store');

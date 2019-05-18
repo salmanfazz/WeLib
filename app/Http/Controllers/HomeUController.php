@@ -8,6 +8,8 @@ class HomeUController extends Controller
 {
     public function index()
     {
-        return view('home-u');
+    	$data['peminjaman'] = \App\PeminjamanU::orderBy('nis')->get();
+        $data['buku'] = \App\Buku::orderBy('kd_buku')->get();
+		return view('home-u',$data);
     }
 }

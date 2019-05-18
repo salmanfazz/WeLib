@@ -8,11 +8,12 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" href="{{ asset('/img/lib.jpeg') }}">
         <!-- Styles -->
         <style>
-            html, body {
-                background-color: #fff;
+            body {
+                /*background-image: url(lib.jpg);*/
+                background: url("../img/lib.jpg") repeat scroll 0 0 transparent;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;

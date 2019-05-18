@@ -25,28 +25,25 @@
 						<table class = "table table-hover">
 							<tr>
 								<th> No </th>
-								<th> ID Peminjaman </th>
+								<th> NIS </th>
 								<th> Kode Buku </th>
 								<th> Judul Buku </th>
 								<th> Kelas </th>
 								<th> Penerbit </th>
-								<th> Tempat Penyimpanan </th>
 								<th> Tanggal Pengembalian </th>
-								<th colspan = "2" width = "auto"><center>Aksi</center><th>
+								<th> Status </th>
+								<th> Aksi </th>
 							</tr>
 								@foreach ($pengembalian as $row)
 							<tr>
 								<td> {{ isset($i) ? ++$i : $i = 1 }} </td>
-								<td> {{ $row->id_peminjaman}} </td>
+								<td> {{ $row->nis}} </td>
 								<td> {{ $row->kd_buku}} </td>
 								<td> {{ $row->nama_buku}} </td>
 								<td> {{ $row->kelas}} </td>
 								<td> {{ $row->penerbit}} </td>
-								<td> {{ $row->penyimpanan}} </td>
-								<td> {{ $row->tanggal_pengembalian}} </td>
-								<td>
-									<a class = "btn btn-success" href = "#">Edit</a>
-								</td>
+								<td> {{ $row->tanggal_kembali}} </td>
+								<td> {{ $row->status }} </td>
 								<td>
 									<form action = "{{ url('/pengembalian', $row->id) }}" method = "POST">
 									@method('DELETE')
