@@ -5,11 +5,13 @@
 	<head>
 		<title>Data Peminjaman Buku</title>
 			<link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+			<link rel="stylesheet" href="css/matrix-style.css" />
+			<link rel="stylesheet" href="css/matrix-media.css" />
 	</head>
 	<body>
 		<div id="content">
 			<div id="content-header">
-				<div id="breadcrumb"> <a href="{{ url('home-u') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
+				<div id="breadcrumb"> <a href="{{ url('') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
 					<div class = "container">
 							@if(session('success'))
 							<div class = "alert alert-success">
@@ -21,7 +23,6 @@
 								{{ session('error') }}
 							</div>
 							@endif
-							<br>
 								<h1>Data Buku</h1>
 						<table class = "table table-hover">
 							<tr>

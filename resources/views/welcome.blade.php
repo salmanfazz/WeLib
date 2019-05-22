@@ -13,12 +13,29 @@
         <style>
             body {
                 /*background-image: url(lib.jpg);*/
-                background: url("../img/lib.jpg") repeat scroll 0 0 transparent;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
+                background: url("../img/lib2.jpg") repeat scroll 0 0 transparent;
+            }
+            .judul{
+                font-family: "montserrat",sans-serif;
+            }
+            .judul h1{
+                font-size: 75px;
+                text-transform: uppercase;
+                font-weight: 900;
+                color: #2c3e5035;
+            }
+            .judul h1:hover{
+                background-image: url("../img/galaxy2.jpg");
+                -webkit-background-clip:text;
+                animation: aer 15s infinite;
+            }
+            @keyframes aer {
+                from{
+                    background-position: left 0 top 0;
+                }
+                to{
+                    background-position: left 1000px top 0;
+                }      
             }
 
             .full-height {
@@ -68,12 +85,13 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome to We-Lib
+                    <div class="judul">
+                    <h1>Welcome to We-Lib</h1>
                 </div>
-
+                    </div>
                 <div class="links">
                     <a href="{{ url('login') }}">Admin</a>
-                    <a href="{{ url('home-u') }}">Guest</a>
+                    <a href="{{ url('Buku-u') }}">Guest</a>
                 </div>
             </div>
         </div>

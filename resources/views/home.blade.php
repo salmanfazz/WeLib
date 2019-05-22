@@ -5,11 +5,13 @@
 	<head>
 		<title>Home</title>
 			<link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+			<link rel="stylesheet" href="css/matrix-style.css" />
+			<link rel="stylesheet" href="css/matrix-media.css" />
 	</head>
 	<body>
 		<div id="content">
 			<div id="content-header">
-				<div id="breadcrumb"> <a href="{{ url('home') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
+				<div id="breadcrumb"> <a href="{{ url('home') }}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> </div>
 					<div class="row">
 						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
 							<div class="card card-statistics">
