@@ -49,14 +49,12 @@
 		<!--sidebar-menu-->
 		<div id="sidebar"><a href="{{ url('home') }}" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
 			<ul>
-				<li><a href="{{ url('home') }}"><i class="icon icon-home"></i> <span>Home</span></a> </li>
-				<li><a href="{{ url('Pengembalian') }}"><i class="icon icon-th"></i> <span>Data Pengembalian</span></a> </li>
-				<li><a href="{{ url('Peminjaman') }}"><i class="icon icon-th"></i> <span>Data Peminjaman</span></a> </li>
-				<li><a href="{{ url('Buku') }}"><i class="icon icon-th"></i> <span>Data Buku</span></a></li>
-				<li>
-					<a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-						{{ __('Logout') }}
-					</a>
+				<li><a href="{{ url('home') }}"><i class="icon icon-home"></i> <span>Home</span></a></li>
+				<li><a href="{{ url('Buku') }}"><i class="icon icon-book"></i> <span>Data Buku</span></a></li>
+				<li><a href="{{ url('Peminjaman') }}"><i class="icon icon-list"></i> <span>Data Peminjaman</span></a></li>
+				<li><a href="{{ url('Pengembalian') }}"><i class="icon icon-list"></i> <span>Data Pengembalian</span></a></li>
+				<li><a href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+					<i class="icon icon-off"></i>{{ __('Logout') }}</a></li>
 					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
 				</li>
 			</ul>

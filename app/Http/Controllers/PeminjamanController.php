@@ -29,4 +29,17 @@ class PeminjamanController extends Controller
 			return redirect('/Peminjaman')->with('error', 'Data gagal dihapus');
 		}
 	}
+	
+	public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+		// mengambil data dari table peminjaman sesuai pencarian data
+		$data['peminjaman'] = \App\Peminjaman::where('nis','like',"%".$cari."%")->get();
+
+			// mengirim data buku ke view index
+		return view('Peminjaman', $data);
+
+	}
 }

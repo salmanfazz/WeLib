@@ -51,4 +51,16 @@ class PengembalianUController extends Controller
 			return redirect('/Pengembalian/create')->with('error', 'Data Gagal Ditambahkan');
 		}
 	}
+	
+	public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+		// mengambil data dari table pengembalian sesuai pencarian data
+		$data['pengembalian'] = \App\PengembalianU::where('nis','like',"%".$cari."%")->get();
+
+			// mengirim data buku ke view index
+		return view('PengembalianU', $data);
+	}
 }

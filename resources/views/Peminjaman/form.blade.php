@@ -40,7 +40,7 @@
 				<label for = "tanggal_peminjaman">Tanggal Peminjaman</label>
 					<input type = "text" class = "form-control" name = "tanggal_peminjaman" value = "{{ old('tanggal_peminjaman', @$peminjaman->tanggal_peminjaman) }}" placeholder="yyyy/mm/dd"/>
 				<label for = "status">Status</label>
-					<input type = "text" class = "form-control" name = "status" value = "{{ old('status', @$peminjaman->status) }}" placeholder="Masukkan Status"/>
+					<input type = "text" class = "form-control" name = "status" value = "Dipinjam" readonly/>
 			</div>
 				<input type = "submit" class = "btn btn-primary" value = "Simpan">
 		</form>

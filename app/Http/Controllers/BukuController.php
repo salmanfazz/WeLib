@@ -99,4 +99,16 @@ class BukuController extends Controller
 			return redirect('/Buku')->with('error', 'Data gagal dihapus');
 		}
 	}
+	
+	public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+		// mengambil data dari table buku sesuai pencarian data
+		$data['buku'] = \App\Buku::where('nama_buku','like',"%".$cari."%")->get();
+
+			// mengirim data buku ke view index
+		return view('Buku', $data);
+	}
 }

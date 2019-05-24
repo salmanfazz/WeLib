@@ -22,9 +22,10 @@
 		<!--sidebar-menu-->
 		<div id="sidebar"><a href="{{ url('welcome') }}" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
 			<ul>
-				<li><a href="{{ url('Buku-u') }}"><i class="icon icon-th"></i> <span>Data Buku</span></a></li>
-				<li><a href="{{ url('PeminjamanU') }}"><i class="icon icon-th"></i> <span>Data Peminjaman</span></a> </li>
-				<li><a href="{{ url('PengembalianU') }}"><i class="icon icon-th"></i> <span>Data Pengembalian</span></a> </li>
+				<li><a href="{{ url('Buku-u') }}"><i class="icon icon-book"></i> <span>Data Buku</span></a></li>
+				<li><a href="{{ url('PeminjamanU') }}"><i class="icon icon-list"></i> <span>Data Peminjaman</span></a> </li>
+				<li><a href="{{ url('PengembalianU') }}"><i class="icon icon-list"></i> <span>Data Pengembalian</span></a> </li>
+				<li><a href="{{ url('') }}"><i class="icon icon-share-alt"></i> <span>Kembali</span></a> </li>
 			</ul>
 		</div>
 		<!--sidebar-menu-->

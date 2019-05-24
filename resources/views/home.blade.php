@@ -18,10 +18,10 @@
 								<center>
 									<div class="card-body">
 										<div class="clearfix">
-											<div class="float-left">
+											<div class="float-center">
 												<i class="mdi mdi-poll-box text-danger icon-lg"></i>
 											</div>
-											<div class="float-right">
+											<div class="float-center">
 													<p class="mb-0">Peminjaman</p>
 												<div class="fluid-container">
 													<h3 class="font-weight-medium">{{ $peminjaman->count() }}</h3>
@@ -29,7 +29,7 @@
 											</div>
 										</div>
 											<p class="text-muted mt-3 mb-0">
-												<i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> Total Buku yang Dipinjam
+												<i class="mdi mdi-alert-octagon mr-1 icon-book" aria-hidden="true"></i> Buku yang Dipinjam
 											</p>
 									</div>
 								</center>
@@ -40,10 +40,10 @@
 								<center>
 									<div class="card-body">
 										<div class="clearfix">
-											<div class="float-left">
+											<div class="float-center">
 												<i class="mdi mdi-poll-box text-danger icon-lg"></i>
 											</div>
-											<div class="float-right">
+											<div class="float-center">
 													<p class="mb-0">Pengembalian</p>
 												<div class="fluid-container">
 													<h3 class="font-weight-medium">{{ $pengembalian->count() }}</h3>
@@ -51,7 +51,7 @@
 											</div>
 										</div>
 											<p class="text-muted mt-3 mb-0">
-												<i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> Total Buku yang Dikembalikan
+												<i class="mdi mdi-alert-octagon mr-1 icon-book" aria-hidden="true"></i> Buku yang Dikembalikan
 											</p>
 									</div>
 								</center>
@@ -62,10 +62,10 @@
 								<center>
 									<div class="card-body">
 										<div class="clearfix">
-											<div class="float-left">
+											<div class="float-center">
 												<i class="mdi mdi-poll-box text-danger icon-lg"></i>
 											</div>
-											<div class="float-right">
+											<div class="float-center">
 													<p class="mb-0">Buku</p>
 												<div class="fluid-container">
 													<h3 class="font-weight-medium">{{ $buku->count() }}</h3>
@@ -73,7 +73,7 @@
 											</div>
 										</div>
 											<p class="text-muted mt-3 mb-0">
-												<i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> Total Buku yang Ada
+												<i class="mdi mdi-alert-octagon mr-1 icon-book" aria-hidden="true"></i> Buku yang Tersedia
 											</p>
 									</div>
 								</center>

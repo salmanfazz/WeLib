@@ -24,6 +24,10 @@
 							</div>
 							@endif
 								<h1>Data Buku</h1>
+								<form action="/Buku-u/cari" method="GET">
+									<input type="text" name="cari" placeholder="Masukan Nama Buku ..." value="{{ old('cari') }}">
+									<button type="submit" class = "btn btn-primary">Cari</button>
+								</form>
 						<table class = "table table-hover">
 							<tr>
 								<th> No </th>

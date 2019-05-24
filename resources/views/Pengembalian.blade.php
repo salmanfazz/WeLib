@@ -3,7 +3,7 @@
 @section('content')
 <html>
 	<head>
-		<title>Data Peminjaman Buku</title>
+		<title>Data Pengembalian Buku</title>
 			<link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 			<link rel="stylesheet" href="css/matrix-style.css" />
 			<link rel="stylesheet" href="css/matrix-media.css" />
@@ -24,6 +24,10 @@
 							</div>
 							@endif
 								<h1>Data Pengembalian Buku</h1>
+								<form action="/Pengembalian /cari" method="GET">
+									<input type="text" name="cari" placeholder="Masukan NIS  ..." value="{{ old('cari') }}">
+									<button type="submit" class = "btn btn-primary">Cari</button>
+								</form>
 						<table class = "table table-hover">
 							<tr>
 								<th> No </th>

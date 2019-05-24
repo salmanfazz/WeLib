@@ -40,7 +40,7 @@
 				<label for = "tanggal_kembali">Tanggal Pengembalian</label>
 					<input type = "text" class = "form-control" name = "tanggal_kembali" value = "{{ old('tanggal_kembali', @$pengembalian->tanggal_kembali) }}" placeholder="yyyy/mm/dd"/>
 				<label for = "status">Status</label>
-					<input type = "text" class = "form-control" name = "status" value = "{{ old('status', @$pengembalian->status) }}" placeholder="Masukkan Status"/>
+					<input type = "text" class = "form-control" name = "status" value = "Kembali" readonly/>
 			</div>
 				<input type = "submit" class = "btn btn-primary" value = "Simpan">
 		</form>

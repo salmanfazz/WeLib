@@ -51,4 +51,16 @@ class PeminjamanUController extends Controller
 			return redirect('/Peminjaman/create')->with('error', 'Data Gagal Ditambahkan');
 		}
 	}
+	
+	public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+		// mengambil data dari table peminjaman sesuai pencarian data
+		$data['peminjaman'] = \App\PeminjamanU::where('nis','like',"%".$cari."%")->get();
+
+			// mengirim data buku ke view index
+		return view('PeminjamanU', $data);
+	}
 }

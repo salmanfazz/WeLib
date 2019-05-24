@@ -23,8 +23,13 @@
 								{{ session('error') }}
 							</div>
 							@endif
+							<br>
+							<a class = "btn btn-primary" type = "submit" href = "{{ url('/Pengembalian/create') }}"> Tambah Data </a>
 								<h1>Data Pengembalian Buku</h1>
-								<a class = "btn btn-primary" type = "submit" href = "{{ url('/Pengembalian/create') }}"> Tambah Data </a>
+								<form action="/PengembalianU/cari" method="GET">
+									<input type="text" name="cari" placeholder="Masukan NIS ..." value="{{ old('cari') }}">
+									<button type="submit" class = "btn btn-primary">Cari</button>
+								</form>
 						<table class = "table table-hover">
 							<tr>
 								<th> No </th>
