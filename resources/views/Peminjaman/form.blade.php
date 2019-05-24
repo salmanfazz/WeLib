@@ -34,7 +34,7 @@
 				<label for = "nama_buku">Nama Buku</label>
 					<input type = "text" class = "form-control" name = "nama_buku" value = "{{ old('nama_buku', @$peminjaman->nama_buku) }}" placeholder = "Masukkan Nama Buku" />
 				<label for = "kelas">Kelas</label>
-					<input type = "text" class = "form-control" name = "kelas" value = "{{ old('kelas', @$peminjaman->kelas) }}" placeholder="Masukkan Kelas"/>
+					<input type = "text" class = "form-control" name = "kelas" value = "{{ old('kelas', @$peminjaman->kelas) }}" placeholder="Masukkan Kelas" required pattern ="[1]+([1-3]{3})" title ="Enter Kelas Format Example 10"/>
 				<label for = "penerbit">Penerbit</label>
 					<input type = "text" class = "form-control" name = "penerbit" value = "{{ old('penerbit', @$peminjaman->penerbit) }}" placeholder="Masukkan Nama Penerbit"/>
 				<label for = "tanggal_peminjaman">Tanggal Peminjaman</label>

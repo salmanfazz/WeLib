@@ -28,7 +28,7 @@
 			@endif
 			<div class = "form-group">
 				<label for = "kd_buku">Kode Buku</label>
-					<input type = "text" class = "form-control" name = "kd_buku" value = "{{ old('kd_buku', @$buku->kd_buku) }}" placeholder="Masukkan Kode Buku" />
+					<input type = "text" class = "form-control" name = "kd_buku" value = "{{ old('kd_buku', @$buku->kd_buku) }}" placeholder="Masukkan Kode Buku" required pattern ="[KD]+([0-9]{3})" title ="Enter Kode Buku Format Example KD000"/>
 				<label for = "name">Judul Buku</label>
 					<input type = "text" class = "form-control" name = "nama_buku" value = "{{ old('nama_buku', @$buku->nama_buku) }}" placeholder = "Masukkan Judul Buku" />
 				<label for = "kurikulum">Kurikulum</label><br>
@@ -39,7 +39,7 @@
 				<label class = "form-check-label"> 2013 </label><br>
 			</div>
 				<label for = "kelas">Kelas</label>
-					<input type = "text" class = "form-control" name = "kelas" value = "{{ old('kelas', @$buku->kelas) }}" placeholder="Masukkan Kelas"/>
+					<input type = "text" class = "form-control" name = "kelas" value = "{{ old('kelas', @$buku->kelas) }}" placeholder="Masukkan Kelas" required pattern ="[1]+([1-3]{3})" title ="Enter Kelas Format Example 10"/>
 				<label for = "penerbit">Penerbit</label>
 					<input type = "text" class = "form-control" name = "penerbit" value = "{{ old('penerbit', @$buku->penerbit) }}" placeholder="Masukkan Nama Penerbit"/>
 			</div>
