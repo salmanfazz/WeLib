@@ -28,9 +28,9 @@
 			@endif
 			<div class = "form-group">
 				<label for = "nis">NIS</label>
-					<input type = "text" class = "form-control" name = "nis" value = "{{ old('nis', @$peminjaman->nis) }}" placeholder="Masukkan NIS" />
+					<input type = "text" class = "form-control" name = "nis" value = "{{ old('nis', @$peminjaman->nis) }}" placeholder="Masukkan NIS" required pattern ="\d{10}" title ="Enter NIS Format 10 Digit Number Required"/>
 				<label for = "kd_buku">Kode Buku</label>
-					<input type = "text" class = "form-control" name = "kd_buku" value = "{{ old('kd_buku', @$peminjaman->kd_buku) }}" placeholder = "Masukkan Kode Buku" />
+					<input type = "text" class = "form-control" name = "kd_buku" value = "{{ old('kd_buku', @$peminjaman->kd_buku) }}" placeholder = "Masukkan Kode Buku" required pattern ="[KD]+([0-9]{3})" title ="Enter Kode Buku Format Example KD000"/>
 				<label for = "nama_buku">Nama Buku</label>
 					<input type = "text" class = "form-control" name = "nama_buku" value = "{{ old('nama_buku', @$peminjaman->nama_buku) }}" placeholder = "Masukkan Nama Buku" />
 				<label for = "kelas">Kelas</label>
@@ -38,7 +38,7 @@
 				<label for = "penerbit">Penerbit</label>
 					<input type = "text" class = "form-control" name = "penerbit" value = "{{ old('penerbit', @$peminjaman->penerbit) }}" placeholder="Masukkan Nama Penerbit"/>
 				<label for = "tanggal_peminjaman">Tanggal Peminjaman</label>
-					<input type = "text" class = "form-control" name = "tanggal_peminjaman" value = "{{ old('tanggal_peminjaman', @$peminjaman->tanggal_peminjaman) }}" placeholder="yyyy/mm/dd"/>
+					<input type="text" class = "form-control" name="tanggal_peminjaman" placeholder="YYYY/MM/DD" value = "{{ old('tanggal_peminjaman', @$peminjaman->tanggal_peminjaman) }}" required pattern="(?:19|20)[0-9]{2}/(?:(?:0[1-9]|1[0-2])/(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])/(?:30))|(?:(?:0[13578]|1[02])-31))" title="Enter Date Format YYYY/MM/DD"/>
 				<label for = "status">Status</label>
 					<input type = "text" class = "form-control" name = "status" value = "Dipinjam" readonly/>
 			</div>
